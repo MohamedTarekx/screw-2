@@ -2,7 +2,6 @@
 
 A modern, futuristic web application for tracking scores in the Skrew card game.
 
-![Skrew Score Tracker](https://via.placeholder.com/800x400?text=Skrew+Score+Tracker)
 
 ## Features
 
