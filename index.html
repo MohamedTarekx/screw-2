@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skrew Card Game Score Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta name="theme-color" content="#9333ea">
+</head>
+<body class="dark-mode">
+  <div class="container">
+    <header>
+      <h1 class="title">Skrew Score Tracker</h1>
+      <div class="theme-toggle">
+        <button id="themeToggle" aria-label="Toggle theme">
+          <span class="toggle-icon">🌙</span>
+        </button>
+      </div>
+    </header>
+
+    <main id="app">
+      <!-- Game Setup Form -->
+      <div id="gameSetup" class="card">
+        <h2>New Game</h2>
+        <p class="info-text">Enter 2-8 player names to start</p>
+        
+        <div class="player-inputs">
+          <div class="player-input">
+            <label for="player1">Player 1</label>
+            <input type="text" id="player1" placeholder="Name" required>
+          </div>
+          <div class="player-input">
+            <label for="player2">Player 2</label>
+            <input type="text" id="player2" placeholder="Name" required>
+          </div>
+        </div>
+        
+        <div class="buttons">
+          <button id="addPlayer" class="btn btn-secondary">Add Player</button>
+          <button id="startGame" class="btn btn-primary">Start Game</button>
+        </div>
+      </div>
+
+      <!-- Game Play -->
+      <div id="gamePlay" class="card hidden">
+        <div class="round-info">
+          <h2>Round <span id="currentRound">1</span>/5</h2>
+        </div>
+        
+        <div class="score-table-container">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Score</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody id="roundScores">
+              <!-- Player scores will be added here -->
+            </tbody>
+          </table>
+        </div>
+        
+        <div class="buttons">
+          <button id="nextRound" class="btn btn-primary">Next Round</button>
+        </div>
+      </div>
+
+      <!-- Score Summary -->
+      <div id="scoreSummary" class="card hidden">
+        <h2>Score Summary</h2>
+        
+        <div class="score-table-container">
+          <table class="score-table">
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+                <th>R4</th>
+                <th>R5</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+            <tbody id="summaryScores">
+              <!-- Score summary will be added here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Results -->
+      <div id="results" class="card hidden">
+        <h2>Game Results</h2>
+        
+        <div class="winners-container">
+          <div id="winnerDisplay" class="winner">
+            <h3>Winner</h3>
+            <div class="player-result">
+              <span class="player-name">Player 1</span>
+              <span class="score">0</span>
+            </div>
+          </div>
+          
+          <div id="loserDisplay" class="loser">
+            <h3>الكوز (Loser)</h3>
+            <div class="player-result">
+              <span class="player-name">Player 2</span>
+              <span class="score">0</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="all-players-results-container">
+          <h3>All Players Results</h3>
+          <div id="allPlayersResults" class="all-players-results">
+            <!-- All players results will be added here -->
+          </div>
+        </div>
+        
+        <div class="buttons">
+          <button id="newGame" class="btn btn-primary">New Game</button>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2025 Skrew Card Game Score Tracker | <a href="https://github.com/yourusername/skrew-score-tracker" target="_blank">GitHub</a></p>
+    </footer>
+  </div>
+
+  <!-- Scanlines overlay for futuristic effect -->
+  <div class="scanlines"></div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
